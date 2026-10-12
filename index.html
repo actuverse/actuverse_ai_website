@@ -137,6 +137,38 @@
   }
 
   /* ---------- HERO ---------- */
+  .nav-waitlist{
+    padding: 6px 16px;
+    border-top: 1px solid rgba(34,211,238,0.15);
+    background: rgba(34,211,238,0.05);
+    text-align: center;
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+  .nav-waitlist a{ color: var(--cyan); }
+  .nav-waitlist a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+  .hero-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+  .hero-waitlist{
+    margin-left: auto;
+    text-align: right;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+  .hero-waitlist a{ color: var(--cyan); font-weight: 500; }
+  .hero-waitlist a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 540px){
+    .hero-waitlist{ flex-basis: 100%; }
+  }
+  .nav-waitlist a:focus-visible, .hero-waitlist a:focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+  }
   .hero{
     position: relative;
     min-height: 100vh;
@@ -224,6 +256,90 @@
   .btn-primary:hover{
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(34,211,238,0.25);
+  }
+  .registration-status{
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 12px;
+    border: 1px solid rgba(34,211,238,0.35);
+    border-radius: 100px;
+    background: rgba(34,211,238,0.06);
+    color: var(--cyan);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+  .registration-status::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    flex-shrink: 0;
+  }
+  .trials-box a:focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 5px;
+  }
+
+  /* ---------- UPCOMING COMPANY TRIALS ---------- */
+  .trials-section{ padding: 72px 0; }
+  .trials-box{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 48px;
+    padding: 48px;
+    border: 1px solid rgba(34,211,238,0.3);
+    border-radius: 18px;
+    background:
+      radial-gradient(ellipse at top right, rgba(59,111,237,0.14), transparent 65%),
+      var(--bg-1);
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .trials-copy .eyebrow{ display: block; margin: 22px 0 12px; }
+  .trials-copy h2{
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .trials-copy p{ color: var(--text-1); margin-bottom: 14px; }
+  .trials-copy p:last-child{ margin-bottom: 0; }
+  .trials-next{
+    align-self: center;
+    padding-left: 32px;
+    border-left: 1px solid var(--line);
+  }
+  .trials-next h3{ font-size: 1.15rem; margin-bottom: 16px; }
+  .trials-next ul{
+    padding-left: 20px;
+    margin-bottom: 24px;
+    color: var(--text-1);
+    font-size: 0.95rem;
+  }
+  .trials-next li{ padding-left: 4px; margin-bottom: 10px; }
+  .trials-next li::marker{ color: var(--cyan); }
+  .trials-note{ color: var(--text-2); font-size: 0.84rem; margin-top: 14px; }
+  .trials-social{ margin-top: 20px; }
+  .trials-social a{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-1);
+    font-size: 0.98rem;
+    transition: color .18s ease;
+  }
+  .trials-social a:hover{ color: var(--cyan); }
+  .trials-social svg{ width: 16px; height: 16px; flex-shrink: 0; opacity: 0.8; }
+  @media (max-width: 860px){
+    .trials-box{ grid-template-columns: 1fr; gap: 28px; }
+    .trials-next{ padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  }
+  @media (max-width: 640px){
+    .trials-section{ padding: 48px 0; }
+    .trials-box{ padding: 28px 24px; }
   }
 
   /* Short laptop screens need a tighter hero so the CTA stays clear of the wave. */
@@ -484,7 +600,8 @@
     background: linear-gradient(90deg, var(--cyan), var(--violet));
     border-radius: 18px 18px 0 0;
   }
-  .whatisai-box::after{
+  .whatisai-box::after,
+  .trials-box::after{
     content:"";
     position:absolute;
     inset:0;
@@ -494,8 +611,10 @@
     transition: opacity .3s ease;
     pointer-events: none;
   }
-  .whatisai-box:hover::after{ opacity: 1; }
-  .whatisai-box:hover{
+  .whatisai-box:hover::after,
+  .trials-box:hover::after{ opacity: 1; }
+  .whatisai-box:hover,
+  .trials-box:hover{
     border-color: rgba(34,211,238,0.45);
     box-shadow: 0 0 44px rgba(34,211,238,0.10);
   }
@@ -738,6 +857,9 @@
     </nav>
     <a class="nav-cta" href="#contact">Get in touch</a>
   </div>
+  <div class="nav-waitlist">
+    <a href="#trials">AI &amp; ML trials: join the waiting list →</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -750,7 +872,45 @@
     </h1>
     <p class="lead">Actuarial and general insurance consultancy for Personal Lines, Commercial Lines, and the London Market.</p>
     <p class="sub">Based in London, working across the UK and internationally. The actuarial profession is changing rapidly; we're helping insurers and their actuaries to navigate both the proven path and the emerging one, together.</p>
-    <a class="btn-primary" href="#contact">Get in touch →</a>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#contact">Get in touch →</a>
+      <div class="hero-waitlist">
+        <a href="#trials">Join the AI &amp; ML trial waiting list →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="trials" class="trials-section" aria-labelledby="trials-heading">
+  <div class="wrap">
+    <div class="trials-box">
+      <div class="trials-copy">
+        <span class="registration-status">Registrations of interest now open</span>
+        <span class="eyebrow">Upcoming company trials</span>
+        <h2 id="trials-heading">What could <span class="grad-text">AI &amp; machine learning</span> reveal about your insurance portfolio?</h2>
+        <p>Our research into AI and machine learning for actuarial modelling is progressing. We're opening registrations of interest for upcoming trials with insurers and actuarial teams.</p>
+        <p>From reserving and reserve risk to capital modelling and pricing, register your company's interest to follow our progress and explore where these methods could help your business.</p>
+      </div>
+      <div class="trials-next">
+        <h3>Join the conversation early</h3>
+        <ul>
+          <li>Tell us where your team would like to explore AI and machine learning.</li>
+          <li>Request updates as our research develops.</li>
+          <li>Hear about upcoming trials as opportunities take shape.</li>
+        </ul>
+        <a class="btn-primary" href="mailto:info@actuverse.ai?subject=Actuverse%20AI%20%26%20ML%20trial%20interest&amp;body=Please%20register%20my%20interest%20in%20upcoming%20Actuverse%20AI%20and%20machine%20learning%20trials%20and%20send%20me%20research%20updates%20and%20trial%20information.%0D%0A%0D%0AName%3A%20%0D%0ACompany%3A%20%0D%0ARole%3A%20%0D%0AAreas%20of%20interest%20%28e.g.%20reserving%2C%20reserve%20risk%2C%20capital%20modelling%2C%20pricing%29%3A%20">Register interest by email →</a>
+        <p class="trials-note">Opens an email draft. Add your details and send it to register your interest.</p>
+        <div class="trials-social">
+          <a href="https://www.linkedin.com/company/actuverse-actuarial" target="_blank" rel="noopener">
+            <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="16" rx="3" stroke="#22d3ee" stroke-width="1.3"/><path d="M5.2 7.3V13" stroke="#22d3ee" stroke-width="1.3" stroke-linecap="round"/><circle cx="5.2" cy="5" r="0.9" fill="#22d3ee"/><path d="M8.6 13V9.6C8.6 8.3 9.4 7.4 10.6 7.4C11.8 7.4 12.6 8.3 12.6 9.6V13" stroke="#22d3ee" stroke-width="1.3" stroke-linecap="round"/><path d="M8.6 7.3V13" stroke="#22d3ee" stroke-width="1.3" stroke-linecap="round"/></svg>
+            Follow us on LinkedIn
+          </a>
+        </div>
+        <p class="trials-note">Trials are in development. Further details will follow as the research progresses.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -979,7 +1139,7 @@
 </script>
 
 <script>
-  document.querySelectorAll('.card, .whatisai-box').forEach(function(card){
+  document.querySelectorAll('.card, .whatisai-box, .trials-box').forEach(function(card){
     card.addEventListener('mousemove', function(e){
       var rect = card.getBoundingClientRect();
       card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');

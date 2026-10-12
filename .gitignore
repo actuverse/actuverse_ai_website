@@ -1,0 +1,27 @@
+# Local assistant instructions, context, and configuration
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+GEMINI.md
+.agents/
+.codex/
+.claude/
+.context/
+context/
+context.md
+CONTEXT.md
+*.context.md
+
+# Local credentials and environment configuration
+.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local tooling and generated files
+node_modules/
+.wrangler/
+.DS_Store
+*.log
