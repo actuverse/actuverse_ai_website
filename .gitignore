@@ -21,6 +21,7 @@ CONTEXT.md
 *.key
 
 # Local tooling and generated files
+/public/
 node_modules/
 .wrangler/
 .DS_Store
