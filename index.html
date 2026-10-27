@@ -13,7 +13,7 @@
 <!-- END Google tag (gtag.js) -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actuverse — Where actuarial science meets AI</title>
+<title>Actuverse | Where actuarial science meets AI</title>
 <meta name="description" content="Actuarial and general insurance consultancy for Personal Lines, Commercial Lines, and the London Market. Traditional actuarial rigor, and AI/ML approaches built in partnership.">
 <link rel="icon" href="assets/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -878,6 +878,42 @@
 @media(prefers-reduced-motion:reduce){.insurance-note .insurance-note-text{animation:none;background:none;color:inherit;transition:none;}}
 
 </style>
+<style id="layout-refinement">
+.hero .experience-line{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.4;color:var(--text-1);margin:0 0 26px;letter-spacing:-.015em;}
+.hero h1{margin-bottom:12px;}
+.hero-actions{justify-content:flex-start;gap:24px;}
+.hero-contact{font-size:.94rem;color:var(--text-1);transition:color .2s ease;}
+.hero-contact:hover{color:var(--cyan);}
+.hero-contact:focus-visible,.card-cta-btn:focus-visible{outline:2px solid var(--cyan);outline-offset:5px;}
+.service-points{list-style:none;margin:8px 0 0;padding:0;color:var(--text-1);font-size:.94rem;}
+.service-points li{position:relative;padding:11px 0 11px 18px;border-bottom:1px solid var(--line);}
+.service-points li:last-child{border:0;}
+.service-points li::before{content:'';position:absolute;left:0;top:21px;width:4px;height:4px;border-radius:50%;background:var(--cyan);}
+.card h3{font-size:1.45rem;line-height:1.3;}
+.card p{margin-bottom:12px;}
+.whatisai-box .section-head{margin-bottom:28px;}
+.ai-focus{margin-bottom:36px;}
+.ai-focus h4{font-size:1.18rem;}
+.ai-context-title{font-size:1.12rem;margin:0 0 14px;}
+.whatisai-intro{font-size:.95rem;margin-bottom:24px;}
+.ai-categories{margin-bottom:0;}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;}
+.experience-grid>div{padding-top:22px;border-top:1px solid rgba(34,211,238,.3);}
+.experience-grid .eyebrow{font-size:.64rem;letter-spacing:.08em;display:block;margin-bottom:12px;}
+.experience-grid h3{font-size:1.18rem;margin-bottom:12px;}
+.experience-grid p{font-size:.94rem;line-height:1.7;color:var(--text-1);}
+@media(max-width:860px){.experience-grid{grid-template-columns:1fr;gap:24px}.card{padding:30px;}}
+@media(max-width:640px){
+ section{padding:60px 0;}.hero{min-height:auto;padding-bottom:195px;}.hero .experience-line{margin-bottom:22px;font-size:1.05rem;}.hero-actions{gap:18px}.hero .btn-primary{padding:12px 18px;font-size:.88rem;}
+ .section-head{margin-bottom:28px;}.services-grid{gap:20px;}.card{padding:26px 22px;}.card h3{font-size:1.35rem;}.card p,.service-points{font-size:.92rem;}.tag-row{gap:14px;padding-top:22px;}
+ .whatisai-box{padding:28px 20px;}.ai-focus{padding:20px 18px;margin-bottom:28px;}.ai-focus p{font-size:.93rem;line-height:1.65;}.ai-focus h4{font-size:1.08rem;}.ai-category{padding:20px;}.ai-categories{gap:14px;}
+ .why-intro{font-size:1rem;}.experience-grid{margin-top:28px;gap:24px;}.experience-grid p{font-size:.93rem;}.contact-box{padding:32px 24px;}
+}
+</style><style>@media(max-width:640px){#what-is-ai{scroll-margin-top:74px;}.ai-focus{padding:18px 14px;}.hero-contact{font-size:.88rem;}}</style><style>@media(max-width:640px){.hero-bg{background-position:center calc(100% + 90px);}}</style><style id="credibility-refinement">
+.insurance-note{font-size:.9375rem;}
+.ai-focus .insurance-focus-heading{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.45rem,2.3vw,1.9rem);line-height:1.25;font-weight:600;letter-spacing:-.02em;margin:0 0 20px;color:var(--text-0);}
+@media(max-width:640px){.insurance-note{font-size:.8125rem;gap:7px}.insurance-note .insurance-note-text{width:148px;flex-basis:148px}.ai-focus .insurance-focus-heading{font-size:1.38rem;line-height:1.3}.experience-grid p{line-height:1.65}}
+</style>
 </head>
 <body id="top">
 
@@ -913,16 +949,14 @@
   <div class="wrap hero-content">
     <div class="hero-identity"><img class="hero-logo" src="assets/logo-mark.png" alt="Actuverse"><a class="insurance-note" href="#what-is-ai"><span class="insurance-note-text">Insurance models, not language models</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 4v12m-4-4 4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     <h1>
-      <span class="tagline-ai">Where actuarial science meets AI</span><br>
-      <span class="tagline-exp">Where actuarial science meets experience</span>
+      <span class="tagline-ai">Where actuarial science meets AI</span>
     </h1>
+    <p class="experience-line">Where actuarial science meets experience</p>
     <p class="lead">Actuarial and general insurance consultancy for Personal Lines, Commercial Lines, and the London Market.</p>
     <p class="sub">Based in London, working across the UK and internationally. The actuarial profession is changing rapidly; we're helping insurers and their actuaries to navigate both the proven path and the emerging one, together.</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="#contact">Get in touch →</a>
-      <div class="hero-waitlist">
-        <a href="https://trials.actuverse.ai">Join the AI &amp; ML trial waiting list →</a>
-      </div>
+      <a class="btn-primary" href="https://trials.actuverse.ai">Register interest in trials <span aria-hidden="true">↗</span></a>
+      <a class="hero-contact" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -972,25 +1006,17 @@
     <div class="services-grid">
       <div class="card card-ai">
         <span class="tag">AI &amp; Machine Learning</span>
-        <h3>Where actuarial science meets <span class="hl">AI</span></h3>
-        <p>Machine learning is opening new possibilities across actuarial work: reserving, reserve risk, capital modelling, pricing and beyond. However, the field is still young, and no one has all the answers yet.</p>
-        <p>Developing new standards works best as a partnership: working together to sharpen insight into your business and unlock the full potential of these techniques. We're upfront about what's proven and what's still evolving, building trust step by step rather than promising transformation overnight.</p>
-        <p>You'll have not only a sharper understanding of your data, but also the knowledge and tools to apply machine learning techniques within your own actuarial team.</p>
-        <p>We're actively building these capabilities in partnership with clients who wish to shape new standards, while collaborating with fellow actuaries on where the profession goes next.</p>
-        <div class="tag-row">
-          <span class="status-tag">Available, by partnership</span>
-        </div>
+        <h3>Insurance modelling,<br><span class="hl">with neural networks</span></h3>
+        <p>Research into claims reserving and reserve uncertainty, with the ambition to extend a common modelling foundation into capital modelling and pricing.</p>
+        <ul class="service-points"><li>Explore relevant actuarial questions</li><li>Discuss potential research collaboration</li><li>Register interest in upcoming trials</li></ul>
+        <div class="tag-row"><span class="status-tag">Research in development</span><a class="card-cta-btn" href="https://trials.actuverse.ai">Register interest <span aria-hidden="true">↗</span></a></div>
       </div>
-
       <div class="card card-trad">
-        <span class="tag">Traditional Methods</span>
-        <h3>Where actuarial science meets <span class="hl">experience</span></h3>
-        <p>Reserving, reserve risk, capital modelling, pricing, underwriting support, reporting and the full breadth of actuarial work, done the way the profession has always relied on: rigorous, transparent, and defensible.</p>
-        <p>This is the foundation the profession stands on, and it's never treated as an afterthought.</p>
-        <div class="tag-row">
-          <span class="status-tag">Available now</span>
-          <a href="https://actuverse.uk" target="_blank" rel="noopener" class="card-cta-btn">Explore actuverse.uk<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 7.5L7.5 2.5M7.5 2.5H3.5M7.5 2.5V6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
+        <span class="tag">Actuarial Consultancy</span>
+        <h3>Established methods,<br><span class="hl">experienced judgement</span></h3>
+        <p>Independent actuarial support for insurers across the Lloyd’s, London and wider insurance markets, with clear communication of assumptions and uncertainty.</p>
+        <ul class="service-points"><li>Capital modelling and model validation</li><li>Reserving and reserve risk</li><li>Technical analysis and communication</li></ul>
+        <div class="tag-row"><span class="status-tag">Consulting enquiries</span><a class="card-cta-btn" href="https://actuverse.uk" target="_blank" rel="noopener">Explore actuverse.uk <span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
   </div>
@@ -1005,6 +1031,12 @@
         <span class="eyebrow">AI, Defined</span>
         <h2>What is <span class="grad-text">AI</span>?</h2>
       </div>
+      <div class="ai-focus" id="wording-preview">
+        <h3 class="insurance-focus-heading">AI with <span class="grad-text">insurance models</span>,<br>not language models</h3>
+        <p>At Actuverse, we are developing neural networks specifically for insurance claims modelling. These machine learning models are designed to learn from insurance data and estimate claim outcomes and their associated uncertainty. These are not language models repackaged for actuarial use.</p>
+        <p style="margin-top: 1em;">Our ambition is to build a common modelling foundation across reserving, reserve risk, capital modelling and pricing. The focus is the insurance risk itself: how claims develop, what they may ultimately cost, and how uncertain those outcomes are.</p>
+      </div>
+      <h3 class="ai-context-title">The wider AI landscape</h3>
       <p class="whatisai-intro">"AI" is a term that covers a broad range of technologies, often used interchangeably with Machine Learning and Deep Learning, and it helps to be specific about which ones we mean, especially as all these areas are developing fast. The categories below aren't strictly separate: generative AI and agentic tools are themselves built on deep learning. The application and architecture are what make a fundamental difference, and it's that difference in use that matters most here.</p>
 
       <div class="ai-categories">
@@ -1025,11 +1057,7 @@
         </div>
       </div>
 
-      <div class="ai-focus" id="wording-preview">
-        <h4>AI with insurance models, not language models</h4>
-        <p>At Actuverse, we are developing neural networks specifically for insurance claims modelling. These machine learning models are designed to learn from insurance data and estimate claim outcomes and their associated uncertainty. These are not language models repackaged for actuarial use.</p>
-        <p style="margin-top: 1em;">Our ambition is to build a common modelling foundation across reserving, reserve risk, capital modelling and pricing. The focus is the insurance risk itself: how claims develop, what they may ultimately cost, and how uncertain those outcomes are.</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -1038,41 +1066,12 @@
 
 <section id="why" class="why-section">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Why Actuverse?</span>
-      <h2>A turning point for the actuarial profession</h2>
-    </div>
-    <p class="why-intro">AI and machine learning are reshaping what's possible, but progress depends on <strong>collaboration across the actuarial profession</strong> and building trust as the tools mature. Actuverse exists to help drive that forward, combining strong technical fundamentals with genuine curiosity about where our profession needs to go next, working with clients and fellow actuaries alike.</p>
-
-    <div class="principles">
-      <div class="principle">
-        <div class="mark"><svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L12 4V9L7 12L2 9V4L7 1Z" stroke="#22d3ee" stroke-width="1.2"/></svg></div>
-        <div>
-          <h4>Technically strong</h4>
-          <p>Across both traditional and modern methods, not one dressed up as the other.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="mark"><svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7H12M8 3L12 7L8 11" stroke="#22d3ee" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div>
-          <h4>Fast and agile</h4>
-          <p>Attention to detail, no layers of bureaucracy.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="mark"><svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="6.5" r="5" stroke="#22d3ee" stroke-width="1.2"/><path d="M7 4V7L9 8.5" stroke="#22d3ee" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-        <div>
-          <h4>Honest positioning</h4>
-          <p>Confident where the ground is solid, candid where it's still evolving.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <div class="mark"><svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.5" cy="6.5" r="2.3" stroke="#22d3ee" stroke-width="1.2"/><circle cx="9.5" cy="6.5" r="2.3" stroke="#22d3ee" stroke-width="1.2"/></svg></div>
-        <div>
-          <h4>Built on partnership</h4>
-          <p>The best outcomes come from working together, not bold promises that underdeliver.</p>
-        </div>
-      </div>
+    <div class="section-head"><span class="eyebrow">Why Actuverse?</span><h2><span class="grad-text">Actuarial</span> experience<br><span class="grad-text">Research</span> with purpose</h2></div>
+    <p class="why-intro">Actuverse brings together actuarial experience and engineering foundations to develop insurance models grounded in practical actuarial questions. Founded by Michael Ramyar FIA C.Act, it draws on nearly two decades of general insurance experience across capital modelling, reserving, reserve risk and model validation.</p>
+    <div class="experience-grid">
+      <div><span class="eyebrow">Professional grounding</span><h3>Actuarial judgement</h3><p>A Fellow of the Institute and Faculty of Actuaries, combining practical model development and validation with clear communication of assumptions, uncertainty and implications.</p></div>
+      <div><span class="eyebrow">Research foundations</span><h3>Modelling and prediction</h3><p>Actuarial training and practical insurance experience shape the modelling questions. Engineering training, including non-linear model predictive control, adds a complementary foundation in modelling complex relationships, prediction and optimisation. Together, they inform our research into neural networks for claims modelling.</p></div>
+      <div><span class="eyebrow">Professional contribution</span><h3>Shared knowledge</h3><p>Published research into reserve uncertainty, presentations at GIRO and LMAG, and membership of the IFoA’s Machine Learning in Reserving Working Party.</p></div>
     </div>
   </div>
 </section>
